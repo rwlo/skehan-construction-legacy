@@ -1,19 +1,19 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
-import NavBar from "react-bootstrap/NavBar";
+import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
 function Header() {
   return (
     <header className="border-bottom">
-      <NavBar expand="md">
+      <Navbar expand="md">
         <Link exact to="/">
-          <NavBar.Brand as="h1" className="mb-0">
+          <Navbar.Brand as="h1" className="mb-0">
             Skehan Construction Company
-          </NavBar.Brand>
+          </Navbar.Brand>
         </Link>
-        <NavBar.Toggle className="border-0" aria-controls="navbar-toggle" />
-        <NavBar.Collapse id="navbar-toggle">
+        <Navbar.Toggle className="border-0" aria-controls="Navbar-toggle" />
+        <Navbar.Collapse id="Navbar-toggle">
           <Nav className="ml-auto">
             <NavLink exact to="/" className="nav-link" activeClassName="active">
               Home
@@ -40,8 +40,8 @@ function Header() {
               Contact Us
             </NavLink>
           </Nav>
-        </NavBar.Collapse>
-      </NavBar>
+        </Navbar.Collapse>
+      </Navbar>
     </header>
   );
 }
