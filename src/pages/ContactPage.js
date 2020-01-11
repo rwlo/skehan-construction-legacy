@@ -54,12 +54,12 @@ function ContactPage(props) {
 
             <Form.Group controlId="service">
               <Form.Label>Service</Form.Label>
-              <Form.Control as="select" name="service">
-                <option>Construction</option>
-                <option>General Contractor</option>
-                <option>Plumbing</option>
-                <option>Water Heater</option>
-                <option>Other</option>
+              <Form.Control as="select" name="service[]">
+                <option value="construction">Construction</option>
+                <option value="general-contractor">General Contractor</option>
+                <option value="plumbing">Plumbing</option>
+                <option value="water-heater">Water Heater</option>
+                <option value="other">Other</option>
               </Form.Control>
               <Form.Text className="text-muted">
                 Some other words go here..
