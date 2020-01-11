@@ -1,0 +1,35 @@
+@import "custom";
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Gelasio", serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
+  padding: 0.1rem;
+}
+
+// HomePage CardDeck Component.
+.sc-card-deck {
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    display: block;
+
+    .card {
+      margin-bottom: ($spacer * 2);
+    }
+  }
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    display: flex;
+
+    .card {
+      margin-bottom: 0;
+    }
+  }
+}
