@@ -16,7 +16,7 @@ function ContactPage(props) {
           </p>
           <Form
             name="request-quote"
-            action="POST"
+            method="POST"
             data-netlify="true"
             data-netlify-recaptcha="true"
             className="mt-4"
