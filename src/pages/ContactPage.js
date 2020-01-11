@@ -16,7 +16,7 @@ function ContactPage(props) {
           </p>
           <Form
             name="request-quote"
-            method="POST"
+            action="POST"
             data-netlify="true"
             data-netlify-recaptcha="true"
             className="mt-4"
@@ -28,18 +28,29 @@ function ContactPage(props) {
                   type="text"
                   placeholder="John Smith"
                   name="name"
+                  required
                 />
               </Form.Group>
 
-              <Form.Group as={Col} md={6} controlId="email">
-                <Form.Label>Email Address</Form.Label>
+              <Form.Group as={Col} md={6} controlId="phone">
+                <Form.Label>Phone Number</Form.Label>
                 <Form.Control
-                  type="email"
-                  placeholder="user@email.com"
-                  name="email"
+                  type="number"
+                  placeholder="(415) 555-5555"
+                  name="phone"
                 />
               </Form.Group>
             </Form.Row>
+
+            <Form.Group controlId="email">
+              <Form.Label>Email Address</Form.Label>
+              <Form.Control
+                type="email"
+                placeholder="user@email.com"
+                name="email"
+                required
+              />
+            </Form.Group>
 
             <Form.Group controlId="service">
               <Form.Label>Service</Form.Label>
@@ -70,7 +81,7 @@ function ContactPage(props) {
 
             <div data-netlify-recaptcha="true"></div>
 
-            <Button variant="primary" size="lg" type="submit" className="mt-3">
+            <Button type="submit" variant="primary" size="lg" className="mt-3">
               Request Quote
             </Button>
           </Form>
