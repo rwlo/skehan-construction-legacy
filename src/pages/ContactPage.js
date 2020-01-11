@@ -14,22 +14,36 @@ function ContactPage(props) {
             Please complete & submit all the information in the form below for
             an appointment to receive a quote regarding your upcoming project.
           </p>
-          <Form className="mt-4">
+          <Form
+            name="request-quote"
+            method="POST"
+            data-netlify="true"
+            data-netlify-recaptcha="true"
+            className="mt-4"
+          >
             <Form.Row>
-              <Form.Group as={Col} md={6} controlId="formGridName">
+              <Form.Group as={Col} md={6} controlId="name">
                 <Form.Label>Full Name</Form.Label>
-                <Form.Control type="text" placeholder="John Smith" />
+                <Form.Control
+                  type="text"
+                  placeholder="John Smith"
+                  name="name"
+                />
               </Form.Group>
 
-              <Form.Group as={Col} md={6} controlId="formGridEmail">
+              <Form.Group as={Col} md={6} controlId="email">
                 <Form.Label>Email Address</Form.Label>
-                <Form.Control type="email" placeholder="user@email.com" />
+                <Form.Control
+                  type="email"
+                  placeholder="user@email.com"
+                  name="email"
+                />
               </Form.Group>
             </Form.Row>
 
-            <Form.Group controlId="exampleForm.ControlService">
+            <Form.Group controlId="service">
               <Form.Label>Service</Form.Label>
-              <Form.Control as="select">
+              <Form.Control as="select" name="service">
                 <option>Construction</option>
                 <option>General Contractor</option>
                 <option>Plumbing</option>
@@ -41,17 +55,20 @@ function ContactPage(props) {
               </Form.Text>
             </Form.Group>
 
-            <Form.Group controlId="formGridMessage">
+            <Form.Group controlId="message">
               <Form.Label>Leave a Message</Form.Label>
               <Form.Control
                 as="textarea"
                 rows="4"
                 placeholder="Your message..."
+                name="message"
               />
               <Form.Text className="text-muted">
                 Some other words go here..
               </Form.Text>
             </Form.Group>
+
+            <div data-netlify-recaptcha="true"></div>
 
             <Button variant="primary" size="lg" type="submit" className="mt-3">
               Request Quote
